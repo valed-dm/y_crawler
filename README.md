@@ -1,1 +1,1 @@
-### Asynс crawler for news.ycombinator.com
+### Async crawler for news.ycombinator.com
