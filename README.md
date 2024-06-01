@@ -16,6 +16,15 @@ news.ycombinator.com:
 
 ### Реализация
 
+Параллельная(Асинхронная) обработка задач запускается здесь
+```python
+if item_id not in local_ids:
+    tasks.append(parse_item(session, position, item_link, item_id, item_title, folder_name))
+```
+Ожидаем результат
+```python
+results = await asyncio.gather(*tasks)
+```
 Загруженные данные сохраняются в папках (ID публикации). Внутри вложена папка с загруженными комментариями и ссылками.
 
 [<img src="hn_scraper/images/img_01.png" width="300"/>]()
@@ -93,3 +102,11 @@ async def save_csv(header, rows):
 с параллельными потоками. Учебное задание - иллюстрация asyncio выполнено, хотя полноценным парсером данный код не является.
 
 [<img src="hn_scraper/images/img_13.png" width="300"/>]()
+
+Запускаем спустя несколько часов
+
+[<img src="hn_scraper/images/img_14.png" width="300"/>]()
+
+Отчет о загрузке
+
+[<img src="hn_scraper/images/img_15.png" width="300"/>]()
