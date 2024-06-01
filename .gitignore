@@ -112,6 +112,8 @@ pip-selfcheck.json
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+hn_data/
+versions/
 
 # AWS User-specific
 .idea/**/aws.xml
